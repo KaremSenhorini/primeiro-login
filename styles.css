@@ -1,40 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Noto+Sans:wght@400;700&display=swap');
 
-body {
-    margin: 0;
-    font-family: 'DM Sans', sans-serif;
+body { /*este código CSS estabelece a aparência básica da página da web, garantindo que a margem seja zero e que a fonte 'DM Sans' seja usada em todo o corpo da página.*/
+    margin: 0; /*A primeira linha estabelece a margem do corpo da página para 0 pixels. Isso significa que não haverá espaço em branco entre a borda do navegador e o conteúdo da página.*/
+    font-family: 'DM Sans', sans-serif; /*Fonte escolhida para página*/
 }
 
-.main-login{
-    width: 100vw;
-    height: 100vh;
-    background: #ffffff;
+.main-login{ /*Defini o estilo do class main-login*/
+    width: 100vw; /*largura - irá ocupar toda página*/
+    height: 100vh; /*altura - irá ocupar toda página*/
+    background: #ffffff; /*Cor do fundo*/
+    display: flex; /*um ao lado do outro*/
+    justify-content: center; /*centralizado horizontalmente*/
+    align-items: center; /*verticalmente no contêiner flexível.*/
+}
+
+.left-login{ 
+    width: 50vw; /*largura - irá ocupar 50% da página*/
+    height: 100vh; /*altura - irá ocupar toda página*/
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.left-login{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: column; /*conteúdo dessa classe é dividido em coluna*/
 }
 
 .wave{
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	height: 100%;
+	position: fixed; /*significa que ela permanecerá na mesma posição na página, independentemente do scroll da página.*/
+	bottom: 0; /*rodapé*/
+	left: 0; /*canto esquerdo*/
+	height: 100%; /*altura*/
 }
 
-.left-login > h1 {
+.left-login > h1 { /*Definição da cor da escrita*/
     color: #FFB58A;
 }
 
-.left-login-img{
+.left-login-img{ /*dimensões e posição da ilustração central*/
     position: fixed;
 	bottom: 150px;
 	left: 200px;
@@ -42,7 +42,7 @@ body {
 }
 
 
-.right-login {
+.right-login { /*mesmo sentido da class left-login*/
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -50,66 +50,54 @@ body {
     align-items: center;
 }
 
-.card-login{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px 35px;
-    background: #ffffff;
-    border-radius: 20px;
-}
 
-.card-login > h1 {
+
+.card-login > h1 { /*estilo da fonte do texto em rosa*/
     color: #FF0065;
     font-weight: 800;
     margin:0;
     padding: 20px 0.1em;
+    text-align: center;
 }
 
-.card-login2 {
+.card-login2 { /*estilo da fonte do subtitulo*/
     color: #8F8E8E;
-    font-weight: 100;
-    padding: 10px 0.1em;
-    margin: 0 auto;
+    font-weight: 100; /*negrito*/
+    padding: 10px 0.1em; 
+    margin: 0 auto; /*define que o texto deve ser centralizado horizontalmente no contêiner usando a propriedade margin e o valor "auto". Isso significa que o espaço em branco na esquerda e direita do texto será distribuído igualmente.*/
     text-align: center;
 
 }
 
-.textfield{
+.textfield{ /*estilo de fonte do e-mail e senha*/
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /*define alinhação a esquerda*/
     justify-content: center;
-    margin: 10px 0px;
+    margin: 10px 0px; /*espaçamento*/
     padding: 10px 0.1em;
 }
 
-.textfield > input {
-    width: 100%;
+.textfield > input { /*permite a entrada de dados textuais por parte do usuário.*/
+    width: 100%; /*largura*/
     border: none;
-    border-radius: 10px;
+    border-radius: 10px; 
     padding: 15px;
     background: #ffffff;
-    color: #615b5b;
+    color: #615b5b;/*cor do texto dentro daa caixa*/
     font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056;
+    box-shadow: 0px 10px 40px #00000056; /*sombreamento da caixa*/
     outline: none;
-    box-sizing: border-box;
+    box-sizing: border-box; /*modelo da caixa*/
 }
 
-.textfield > label {
+.textfield > label { /*design da fonte*/
     color: #8F8E8E;
     margin-bottom: 10px;
 }
 
-.textfield > input::placeholder {
-    color: #f0ffff94
-}
-
-.btn-login{
+.btn-login{ /*design do botão de login*/
     width: 40%;
     padding: 10px 0px;
     margin: 5px;
@@ -118,20 +106,40 @@ body {
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #ffffff;
-    cursor: pointer;
-    background: #fca979;
-    box-shadow: 0px 10px 40px -12px #fca979;
-    font-weight: 200;
+    cursor: pointer; /*estilo do cursor ao passar em cima do botão*/
+    background: #fca979; 
+    font-weight: 200; /*espessura da fonte*/
 }
 
-.btn-login:hover { 
+.btn-login:hover {  /*efeito de gradiente do botão*/
     background: rgb(255,181,138);
     background: linear-gradient(90deg, rgba(255,181,138,1) 0%, rgba(255,0,101,1) 100%);
 }
 
-@media only screen and (max-width: 950px){
+@media only screen and (max-width: 950px){ /*responsivo*/
     .card-login{
         width: 85%;
     }
+
+    .wave{
+        display: none; /*nao aparecer imagem*/
+    }
+    .left-login-img{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 660px){ /*responsivo*/
+	.main-login{
+		flex-direction:column;
+        align-items: center;
+}
+
+    .right-login{
+        display: column;
+        align-items: center;
+}
+
 }
 
